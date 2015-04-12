@@ -21,7 +21,7 @@ begin <- df2
 
 # Plot
 x <- begin$DateTime
-y <- begin$Global_active_power
+y <- as.numeric(as.character(begin$Global_active_power))
 
 y31 <- as.numeric(as.character(begin$Sub_metering_1))
 y32 <- as.numeric(as.character(begin$Sub_metering_2))
@@ -40,7 +40,7 @@ plot(x, y4b, axes=TRUE, type="l", lty=1, xlab="datetime", ylab="Voltage", frame=
 plot(x, y31, axes=TRUE, type="l", lty=1, xlab=NA, ylab="Energy sub metering", frame=TRUE)
 lines(x, y32, col = "red", lwd=1)
 lines(x, y33, col = "blue")
-legend("topright", lty=1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+legend("topright", bty="n", lty=1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 plot(x, y4d, axes=TRUE, type="l", lty=1, xlab="datetime", ylab="Global_reactive_power", frame=TRUE)
 

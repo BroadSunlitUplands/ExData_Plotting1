@@ -22,8 +22,9 @@ begin <- df2
 
 # Plot
 
+y <- as.numeric(as.character(begin$Global_active_power))
+
 x <- begin$DateTime
-y <- begin$Global_active_power
 
 png("Plot2.png", width=480, height=480, res=72)
 
